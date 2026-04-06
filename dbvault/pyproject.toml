@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dbvault"
+version = "1.0.0"
+description = "Universal database backup & restore CLI — MySQL, PostgreSQL, MongoDB, SQLite"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "DBVault Contributors" }]
+requires-python = ">=3.9"
+keywords = ["database", "backup", "restore", "mysql", "postgresql", "mongodb", "sqlite", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+    "Topic :: System :: Archiving :: Backup",
+]
+
+dependencies = ["click>=8.1"]
+
+[project.optional-dependencies]
+s3        = ["boto3>=1.26"]
+gcs       = ["google-cloud-storage>=2.0"]
+azure     = ["azure-storage-blob>=12.0"]
+scheduler = ["apscheduler>=3.10"]
+yaml      = ["PyYAML>=6.0"]
+all       = ["boto3>=1.26","google-cloud-storage>=2.0","azure-storage-blob>=12.0","apscheduler>=3.10","PyYAML>=6.0"]
+dev       = ["pytest>=7.0","pytest-cov>=4.0"]
+
+[project.scripts]
+dbvault = "dbvault.cli:main"
+
+[project.urls]
+Homepage   = "https://github.com/your-org/dbvault"
+Repository = "https://github.com/your-org/dbvault"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dbvault*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

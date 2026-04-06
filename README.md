@@ -140,6 +140,12 @@ ERROR Restore failed due to invalid file
 
 ---
 
+## Learning Reference
+
+This project follows the concepts of building a CLI-based database backup system including multi-database support, compression, storage options, and logging as described in the roadmap.sh project guidelines :contentReference[oaicite:0]{index=0}.
+
+---
+
 ## Contributing
 
 Contributions are welcome. To contribute:
@@ -150,3 +156,7 @@ Contributions are welcome. To contribute:
 4. Submit a pull request  
 
 ---
+
+## License
+
+This project is licensed under the MIT License.

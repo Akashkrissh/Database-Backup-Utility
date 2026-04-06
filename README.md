@@ -8,6 +8,9 @@ A command-line tool for automating database backup and restore operations. This 
 
 The Database Backup Utility provides a streamlined interface to perform backup and restore operations using native database tools. It supports compressed backups, structured logging, and an extensible architecture suitable for DevOps workflows and automation pipelines.
 
+This project is inspired by and aligned with the following backend project specification:  
+https://roadmap.sh/projects/database-backup-utility
+
 ---
 
 ## Features
